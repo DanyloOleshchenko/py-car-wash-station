@@ -1,10 +1,10 @@
 class Car:
-    def __init__(self, comfort_class: int, clean_mark: int, brand: str) \
-            -> None:
+    def __init__(self, comfort_class: int, clean_mark: int,
+                 brand: str) -> None:
         if comfort_class < 1 or comfort_class > 7:
-            print("Please enter the number between 1 and 7")
+            raise ValueError("comfort_class must be between 1 and 7")
         if clean_mark < 1 or clean_mark > 10:
-            print("Please enter the number between 1 and 10")
+            raise ValueError("clean_mark must be between 1 and 10")
         self.comfort_class = comfort_class
         self.clean_mark = clean_mark
         self.brand = brand
